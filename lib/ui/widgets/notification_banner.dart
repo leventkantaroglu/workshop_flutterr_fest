@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class NotificationBanner extends StatelessWidget {
-  const NotificationBanner({Key? key}) : super(key: key);
+  final String bannerText;
+  const NotificationBanner(this.bannerText, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -9,10 +10,10 @@ class NotificationBanner extends StatelessWidget {
       child: Container(
         height: 100,
         color: Colors.green,
-        child: const Center(
+        child: Center(
           child: Text(
-            "Kayıtlar başladı",
-            style: TextStyle(
+            bannerText,
+            style: const TextStyle(
               color: Colors.white,
             ),
           ),
